@@ -3,9 +3,10 @@ import Form from "./components/form";
 export default function Home() {
 	return (
 		<main className="text-center p-4 max-w-[580px] w-full mx-auto">
-			<p className="leading-7 text-xl">
+			<p className="sm:leading-7 sm:text-xl text-base leading-5">
 				Solana transactions are hard to understand.
-				<br />
+			</p>
+			<p className="sm:mt-0 mt-2 sm:leading-7 sm:text-xl text-base leading-5">
 				Let&apos;s make it <span className="text-green-400">simpler</span>.
 			</p>
 			<Form />
