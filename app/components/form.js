@@ -5,10 +5,12 @@ import { useRouter } from "next/navigation";
 
 export default function Form() {
 	const [tx, setTx] = useState("");
+	const [searchText, setSearchText] = useState("Search");
 	const router = useRouter();
 
 	const handleSubmit = (event) => {
 		event.preventDefault();
+		setSearchText("Searching...");
 		const transactionVal = event.target.transaction.value;
 		router.push(`/tx/${transactionVal}`);
 	};
@@ -36,7 +38,7 @@ export default function Form() {
 					type="submit"
 					className="bg-green-400 font-normal rounded-md text-black px-6 sm:py-4 py-3 leading-none mt-3 block w-full mx-auto hover:bg-green-500 transition-colors duration-300"
 				>
-					Search
+					{searchText}
 				</button>
 			</form>
 		</>
